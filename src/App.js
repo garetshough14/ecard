@@ -4,38 +4,38 @@ import CustomizeMessage from './components/CustomizeMessage';
 import './App.css';
 
 function App() {
+  const query = new URLSearchParams(window.location.search);
   const [email, setEmail] = useState('');
-  const[greeting, setGreeting] = useState('Dear Mom,')
-  const[body,setBody] = useState('Have a comforting and joyous holliday!')
-  const[closing,setClosing] = useState('Love, your son Garet')
-  const[customize,setCustomize] = useState(false)
-  const [preview,setPreview] = useState('false')
+  const [importedGreeting, setImportedGreeting] = useState(query.get("greeting") || 'Dear Mom,');
+  const [importedBody, setImportedBody] = useState(query.get("body") || 'Have a comforting and joyous holiday!');
+  const [importedClosing, setImportedClosing] = useState(query.get("closing") || 'Love, your son Juan');
+  const [customize, setCustomize] = useState(false);
+  const [preview, setPreview] = useState(false);
+
   return (
     <>
     {customize
       ? <CustomizeMessage
-      setEmail={setEmail}
-        greeting={greeting}
-        setGreeting={setGreeting}
-        body={body}
-        setBody={setBody}
-        closing={closing}
-        setClosing={setClosing}
+        email={email}
+        setEmail={setEmail}
+        greeting={importedGreeting}
+        setGreeting={setImportedGreeting}
+        body={importedBody}
+        setBody={setImportedBody}
+        closing={importedClosing}
+        setClosing={setImportedClosing}
         setPreview={setPreview}
         setCustomize={setCustomize}
-        />
+      />
       : <GreetingCard
-        preview={preview}
-        greeting={greeting}
-        setGreeting={setGreeting}
-        body={body}
-        setBody={setBody}
-        closing={closing}
-        setClosing={setClosing}
+        email={email}
+        greeting={importedGreeting}
+        body={importedBody}
+        closing={importedClosing}
         setCustomize={setCustomize}
         preview={preview}
         setPreview={setPreview}
-    />
+      />
     }
     </>
   );
