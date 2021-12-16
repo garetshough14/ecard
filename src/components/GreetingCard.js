@@ -37,29 +37,30 @@ function GreetingCard({
 
   return (
     <div className="App">
-      <header className="header">
-        <div className="ecard-text">
-        E-Card
+        <header className="header">
+          <div className="ecard-text">E-Card</div>
+          <p className="loved-text">Send something to a loved one</p>
+        </header>
+        <main>
+        <div className="warmth-pic">
+          <img src={warmth} className="App-logo" alt="logo" />
         </div>
-        <p className="loved-text">Send something to a loved one</p>
-      </header>
-      <div className="warmth-pic">
-        <img src={warmth} className="App-logo" alt="logo" />
-      </div>
-      <p>{greeting}</p>
-      <p>{body}</p>
-      <p>{closing}</p>
-      {preview ? (
-        <div>
-          <button onClick={continueEditing}>Continue Editing</button>
-          <button onClick={sendEcard}>Send</button>
+        <div className="all-text">
+        <p>{greeting}</p>
+        <p>{body}</p>
+        <p>{closing}</p>
         </div>
-      ) : (
-        <button className="App-link" onClick={() => setCustomize(true)}>
-          Reshare This Card
-        </button>
-      )}
-
+        {preview ? (
+          <div>
+            <button onClick={continueEditing} className="continue-editing">Continue Editing</button>
+            <button onClick={sendEcard} className="send">Send</button>
+          </div>
+        ) : (
+          <button className="App-link" onClick={() => setCustomize(true)}>
+            Reshare This Card
+          </button>
+        )}
+      </main>
       <footer>Holiday Season 2021</footer>
     </div>
   );

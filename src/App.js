@@ -8,7 +8,7 @@ function App() {
   const [email, setEmail] = useState('');
   const [importedGreeting, setImportedGreeting] = useState(query.get("greeting") || 'Dear Mom,');
   const [importedBody, setImportedBody] = useState(query.get("body") || 'Have a comforting and joyous holiday!');
-  const [importedClosing, setImportedClosing] = useState(query.get("closing") || 'Love, your son Juan');
+  const [importedClosing, setImportedClosing] = useState(query.get("closing") || 'Love, your son Garet');
   const [customize, setCustomize] = useState(false);
   const [preview, setPreview] = useState(false);
 

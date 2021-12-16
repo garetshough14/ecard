@@ -1,19 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
 .App {
   text-align: center;
   background-color: #E02B2B;
+  /* background-image: radial-gradient(circle, red, yellow, green, blue, pink, salmon); */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-form{
+input{
+  padding: 5px;
+  border: 3px dotted green;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: cre;
+}
+
+.all-text{
+  font-size: 25px;
+  /* font-family: 'Mountains of Christmas', cursive; */
+  font-family: 'Pacifico', cursive;
+}
+
+/* form{
   display: flex;
   flex-direction: column;
-}
+} */
 
 .header{
+  font-family: 'Pacifico', cursive;
+  /* font-family: 'Mountains of Christmas', cursive; */
+  /* background-image: radial-gradient(circle, red, yellow, green, blue, pink, salmon); */
   background-color: #057405;
   padding-bottom: 5px;
   padding-top: 10px;
   font-size: 20px;
-  border-bottom: 1px solid #
+  border-bottom: 3px solid yellow;
 }
 
 img{
@@ -23,18 +52,104 @@ img{
 }
 
 footer{
+  border-top: 3px solid yellow;
+  /* background-image: radial-gradient(circle, red, yellow, green, blue, pink, salmon); */
   background-color: #057405;
   padding-top: 20px;
   padding-bottom: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: 'Pacifico', cursive;
 }
 .loved-text{
   font-size: 15px;
 }
 .ecard-text{
-  padding-top: 0px;
+  font-size: 30px;
 }
 .App-link{
+  font-size: 15px;
+  font-family: 'Mountains of Christmas', cursive;
+  background-color: #057405;
+  border: 2px solid yellow;
+  padding: 10px;
+  color: black;
+  border-radius: 10px;
   margin-bottom: 15px;
+}
+
+.full{
+  background-color: #E02B2B
+}
+
+.continue-editing{
+  margin-right: 5px;
+  font-size: 15px;
+  font-family: 'Mountains of Christmas', cursive;
+  background-color: #057405;
+  border: 2px solid yellow;
+  padding: 10px;
+  color: black;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.send{
+  margin-left: 5px;
+  font-size: 15px;
+  font-family: 'Mountains of Christmas', cursive;
+  background-color: #057405;
+  border: 2px solid yellow;
+  padding: 10px;
+  color: black;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.preview-greeting{
+  margin-left: 5px;
+  font-size: 15px;
+  font-family: 'Mountains of Christmas', cursive;
+  background-color: #057405;
+  border: 2px solid yellow;
+  padding: 10px;
+  color: black;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.heading-label{
+  font-family: 'Mountains of Christmas', cursive;
+}
+
+.reshare{
+  font-family: 'Pacifico', cursive;
+}
+
+.scroller{
+  overflow-y: scroll;
+  height: 500px; 
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
 
